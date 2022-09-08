@@ -1,0 +1,267 @@
+* {
+    box-sizing: border-box;
+    margin-top: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: #00111c;
+    color: #fff;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.7rem;
+}
+
+a:hover {
+    color: #85bdbf;
+}
+
+div.container {
+    width: 500px;
+    height: 90vh;
+    margin: 20px auto;
+    background-color: #fff;
+}
+
+@media(min-width: 600px) {
+    div.container {
+        width: 550px;
+    }
+}
+
+header {
+    height: 150px;
+    background-color: #e1ecf7;
+    background-image: url('https://images.unsplash.com/photo-1532190761747-215949f288d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+    background-position: center;
+    /* filter: blur(1px); Find a way to blur background
+    or put a black tint to it*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 1em;
+    padding: 1em;
+    padding-bottom: 3em;
+}
+
+div#titles,
+div#search-bar {
+    display: flex;
+}
+
+div#titles {
+    margin: 1em 1em 0;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+input,
+button#search-btn {
+    font-family: inherit;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input {
+    width: 70%;
+    height: 2.5em;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+input:hover,
+input:focus,
+input:active {
+    border: 1px solid #D1D5DB;
+}
+
+img.search-icon {
+    width: 13px;
+    height: 13px;
+    margin: 0;
+    padding: 0;
+    margin-left: 8px;
+}
+
+button#search-btn {
+    background-color: #fff;
+    font-size: 0.8rem;
+    padding: 10px 15px;
+    border: 1px solid #D1D5DB;
+    border-radius: 0px 6px 6px 0px;
+}
+
+div#search-bar {
+        /* search-bar */
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+    background: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    /* z-index: 2; */
+}
+
+main,
+.main-wishlist {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    color: #00111c;
+    width: 100%;
+    min-height: 380px;
+    /* max-height: 500px; */
+    margin-top: 20px;
+    padding-top: 100px;
+    padding: 1em;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid yellow;
+}
+
+h3.start-exploring {
+    font-size: 0.8rem;
+    color: #DFDDDD;
+    margin-top: 5px;
+}
+
+/* ===============
+    MOVIE ELEMENT
+   =============== */
+div.movies,
+div.main-details,
+div.title-details,
+div.more-info {
+    display: flex;
+    gap: 1em;
+}
+
+div > * {
+    margin: 0;
+}
+
+div.movies {
+    border-bottom: 1px solid #D1D5DB;
+    padding: 1em;
+}
+
+img.poster {
+    width: 100px;
+    height: 140px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.title-details,
+.more-info {
+    align-items: baseline;
+}
+
+.movie-rating {
+    align-self: baseline;
+    margin-left: 0;
+}
+
+div.main-details {
+    flex-direction: column;
+    font-size: 0.8rem;
+}
+
+div.title-details {
+    margin-bottom: 0;
+}
+
+h3#movie-title {
+    width: 85%;
+    padding: 0;
+}
+
+div.more-info {
+    margin: 0;
+    padding: 0;
+}
+
+#movie-rating,
+div.more-info {
+    font-size: 0.7rem;
+}
+
+div.more-info {
+    padding: 0;
+}
+
+button#add {
+    background-color: transparent;
+    border: none;
+    font-size: inherit;
+    font-weight: inherit;
+    align-self: baseline;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button#add:hover,
+button#add:focus {
+    color: #2a628f
+}
+
+img.add-icon,
+img.star {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    padding: 0;
+    margin-right: 2px;
+}
+
+footer {
+    font-size: 0.7rem;
+    text-align: right;
+    background-color: #e1ecf7;
+    color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 20px;
+    padding: 5px;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar-track
+{
+    box-shadow: inset 0px 0px 5px rgba(0,0,0,0.3);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar
+{
+	width: 8px;
+	background-color: #F5F5F5;
+    padding-top: 10px;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color: #404243;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+}
+
+/* To add support to FireFox browser because ::-webkit-scrollbar don't work in firefox */
+
+@supports (scrollbar-color: red blue){
+    * {
+        scrollbar-color: #404040 rgba(0,0,0,0.3);
+        scrollbar-width: thin;
+    }
+}
